@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<script src="jquery-3.6.1.min.js"></script>
+<style>
+img{
+position: relative;
+}
+</style>
+<script>
+$(document).ready(
+    function()
+    {
+        $("button").click(
+        function()
+        {
+            $("img").animate({left: 300});
+        }
+        );
+    }
+    );
+</script>
+</head>
+<body>
+<button>Start Animation</button><br/>
+<img src="pikachu.jpg"
+alt="Mushroom">
+</body>
+</html>

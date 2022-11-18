@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<script src="jquery-3.6.1.min.js"></script>
+<script>
+    $(document).ready(function()
+    {
+        $("#b1").hover(function(){
+            document.write("hello world");
+        });
+        $("p").on("click", function(){
+            $(this).css("background-color", "red");
+        });
+        $("#b2").click(function(){
+            $("p").off("click");
+        });
+        $("#b3").on("click",function(){
+            $("#t1").hide();
+        });
+        $("input").select(function(){
+            $("input").after(" Text marked!");
+        });
+        $("#b4").click(function(){
+            $("input").trigger("select");
+        });
+    });
+</script>
+</head>
+<body>
+<button id="b1">hover</button><br/>
+<p>hello welcome in Mulund college of commerce!!</p>
+<p>TYIT students</p>
+<button id="b2">OFF</button><br/><br/>
+<p id="t1">Hello world</p><br/>
+<button id="b3">ON</button><br/><br/>
+<input type="text" value="229747"><br><br>
+<button id="b4">trigger</button>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<script src="jquery-3.6.1.min.js"></script>
+<script>
+    $(document).ready( function()
+    {
+        $("button").click( function()
+        {
+            document.write("hello world");
+        }
+        );
+    }
+    );
+</script>
+</head>
+<body>
+<p>Hello! Welcome in Jquery Language!!</p>
+<button>Click me</button>
+</body>
+</html>
