@@ -1,0 +1,29 @@
+1. enter these 3 commands in CMD(admin)
+mkdir C:\data\rs1
+mkdir C:\data\rs2
+mkdir C:\data\rs3
+
+2. open 3 CMDs in ADMIN and enter one of these commands in each CMD
+mongod --port 27010 --dbpath "C:\data\rs1" --replSet testrep
+mongod --port 27020 --dbpath "C:\data\rs2" --replSet testrep
+mongod --port 27030 --dbpath "C:\data\rs3" --replSet testrep
+
+3. open 3 CMDs in ADMIN and enter one of these commands in each CMD it open mongo shell
+mongo --port 27010
+mongo --port 27020
+mongo --port 27030
+
+4. put these command in primary mongo shell in port 27010
+rsconf = {_id:"testrep",members:[{_id:0,host:"localhost:27010"}]};
+rs.initiate(rsconf);
+
+5. Add secondary set using
+rs.add("localhost:27020")
+rs.add("localhost:27030")
+
+6. create database and collection in primary
+
+7. open secondary sets and type following commands in both the shells
+rs.secondaryOk()
+
+8. do show dbs
